@@ -1,0 +1,16 @@
+{
+  "name": "archi-ds-viewer",
+  "module": "index.ts",
+  "type": "module",
+  "private": true,
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "scripts": {
+    "dev": "bun build --watch src/main.ts --outdir public & bunx serve public",
+    "build": "bun build src/main.ts --outdir dist"
+  }
+}
