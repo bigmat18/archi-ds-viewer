@@ -1,5 +1,5 @@
 # Logs
-logs/
+logs
 *.log
 npm-debug.log*
 yarn-debug.log*
@@ -7,89 +7,20 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-# Runtime data
-pids/
-*.pid
-*.seed
-*.pid.lock
-
-# Dependency directories
-node_modules/
-jspm_packages/
-
-# Build outputs
-dist/
-dist-ssr/
-build/
-.temp/
-.tmp/
-.out/
-.outdir/
-
-# Environment and local config
-.env
-.env.*
+node_modules
+dist
+dist-ssr
 *.local
 
-# Editor/IDE
+# Editor directories and files
 .vscode/*
 !.vscode/extensions.json
-!.vscode/settings.json
-!.vscode/tasks.json
-!.vscode/launch.json
-.idea/
+.idea
+.DS_Store
 *.suo
 *.ntvs*
 *.njsproj
 *.sln
 *.sw?
 
-# OS files
-.DS_Store
-Thumbs.db
-
-# TypeScript
-*.tsbuildinfo
-
-# Package managers
-.package-lock.json
-.pnpm-debug.log*
-.yarn/*
-!.yarn/releases
-!.yarn/plugins
-!.yarn/sdks
-!.yarn/versions
-.yarn-integrity
-
-# Misc caches
-.cache/
-.npm/
-.eslintcache
-.stylelintcache
-.parcel-cache/
-.next/
-.nuxt/
-.svelte-kit/
-vite.config.ts.timestamp-*
-vite.config.js.timestamp-*
-
-# Coverage and reports
-coverage/
-.nyc_output/
-
-# Storybook
-storybook-static/
-
-# Cypress / Playwright
-cypress/videos/
-cypress/screenshots/
-playwright-report/
-blob-report/
-test-results/
-
-# Temporary files
-*.tmp
-*.temp
-
-# Extra
 dataset/*
