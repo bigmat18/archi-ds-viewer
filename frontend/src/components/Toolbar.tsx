@@ -1,6 +1,6 @@
 import { IconButton, Portal, Stack, Tab, Tabs } from '@mui/material'
 import { Add } from '@mui/icons-material'
-import { useTabPanelContext } from './TabPanelContext'
+import { useTabPanelContext } from '../context/TabContext'
 
 function Content() {
   const { sidebarRef } = useTabPanelContext()

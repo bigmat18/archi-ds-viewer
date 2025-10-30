@@ -1,73 +1,34 @@
-# React + TypeScript + Vite
+# Architectural 3D Dataset Visualization with ML
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A full-stack web platform for analyzing and exploring a dataset of architectural 3D models (e.g., buildings, structures) aimed at training machine learning models. Features interactive visualizations, data querying, and ML preprocessing tools.
 
-Currently, two official plugins are available:
+## Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Frontend
+- **React (TypeScript)**: UI framework for interactive components ([react.dev/learn](https://react.dev/learn)).
+- **Vite**: Build tool and dev server for hot-reloading ([vitejs.dev](https://vitejs.dev/)).
+- **D3.js**: Data visualization for graphs and dataset overviews ([d3js.org](https://d3js.org/)).
+- **Three.js**: 3D rendering for architectural models ([threejs.org](https://threejs.org/)).
+- **MUI (Material-UI)**: Design system for UI components ([mui.com/material-ui/getting-started](https://mui.com/material-ui/getting-started/)).
 
-## React Compiler
+### Backend
+- **Bun (TypeScript)**: Runtime and package manager for the server ([bun.sh/docs](https://bun.sh/docs)).
+- **sql.js**: In-memory SQLite for dataset management (WebAssembly-based, ideal for 3D metadata) ([sql.js.org](http://sql.js.org/)).
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Quick Start
 
-## Expanding the ESLint configuration
+1. **Clone & Install**:
+   ```bash
+   git clone https://github.com/bigmat18/archi-ds-viewer  # O cd nel tuo progetto
+   bun install  # Installa deps per root, frontend e backend
+   ```
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+2. **Development**:
+   ```bash
+   bun run dev  # Avvia frontend (localhost:5173) + backend (localhost:3000) in parallelo
+   ```
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+3. **Build**:
+   ```bash
+   bun run build  # Build frontend (dist/) + backend (backend/dist/)
+   ```

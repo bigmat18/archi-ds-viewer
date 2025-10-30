@@ -1,9 +1,8 @@
 import { Box, Stack } from '@mui/material'
-import './App.css'
 
-import { useTabPanelContext } from './TabPanelContext'
-import { Toolbar } from './Toolbar'
-import { SideBar } from './SideBar'
+import { useTabPanelContext } from './context/TabContext'
+import { Toolbar } from './components/Toolbar'
+import { SideBar } from './components/Sidebar'
 
 export function App() {
   const { selectedTab } = useTabPanelContext()

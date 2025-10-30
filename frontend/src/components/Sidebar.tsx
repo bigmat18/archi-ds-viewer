@@ -1,6 +1,5 @@
 import { Stack } from '@mui/material'
-import './App.css'
-import { useTabPanelContext } from './TabPanelContext'
+import { useTabPanelContext } from '../context/TabContext'
 
 export function SideBar() {
   const { sidebarRef } = useTabPanelContext()
